@@ -3,7 +3,7 @@ require './classroom'
 require './teacher'
 require './student'
 require './person'
-require './rental'
+require './rentals'
 
 class App
   attr_accessor :people, :rentals, :books
@@ -37,7 +37,7 @@ class App
     age = gets.chomp
     print 'Name: '
     name = gets.chomp
-    teacher = Teacher.new(age, specialization, name)
+    teacher = Teacher.new(specialization, age, name)
     people << teacher
     puts ''
     puts '#=> Teacher created successfully'
